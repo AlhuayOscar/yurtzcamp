@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior 1 - Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0f172a",
+                panel: "#e2e8f0",
+                soft: "#f8fafc",
+                accent: "#2563eb",
+                accentDark: "#1d4ed8"
+              }
+            },
+            boxShadow: {
+              login: "0 24px 60px rgba(15, 23, 42, 0.18)"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-100 px-4 py-10 text-slate-900">
+    <main class="mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col gap-8 lg:flex-row">
+      <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-login lg:w-2/5">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
+          Actividad junior 1
+        </p>
+        <h1 class="mt-4 text-3xl font-black text-slate-900">
+          Maqueta un login con Tailwind CSS
+        </h1>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Usa este archivo como punto de partida. La idea es que tu companero
+          complete las clases de Tailwind para lograr un login centrado, con un
+          logo arriba, labels a la izquierda, inputs a la derecha y un boton de
+          ingreso bien visible.
+        </p>
+
+        <div class="mt-6 rounded-2xl bg-slate-50 p-5">
+          <h2 class="text-lg font-bold text-slate-900">Checklist</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+            <li>Agregar un fondo suave que ocupe toda la pantalla.</li>
+            <li>Centrar la tarjeta de login vertical y horizontalmente.</li>
+            <li>Usar bordes redondeados y sombra en la tarjeta.</li>
+            <li>Dejar el logo como primer elemento visual.</li>
+            <li>Ordenar cada fila con label a un lado e input al otro.</li>
+            <li>Estilizar el boton "Ingresar" con colores definidos.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="flex flex-1 items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6">
+        <div class="w-full max-w-xl rounded-3xl border-2 border-dashed border-slate-300 bg-white p-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+            Base para practicar
+          </p>
+
+          <!-- TODO: centrar esta tarjeta usando utilidades de Tailwind -->
+          <!-- TODO: definir colores, rounded y shadow -->
+          <form id="login-form" class="mt-6 space-y-5">
+            <!-- TODO: hacer que el logo sea el primer item y quede centrado -->
+            <img
+              src="./logo.svg"
+              alt="Logo de YurtzCamp"
+              class="mx-auto h-20 w-20"
+            />
+
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900">Iniciar sesion</h2>
+              <p class="mt-2 text-sm text-slate-600">
+                Completa las clases de Tailwind para que este formulario se vea
+                como un login profesional.
+              </p>
+            </div>
+
+            <!-- TODO: alinear el label y el input lado a lado -->
+            <div class="space-y-2">
+              <label for="username" class="text-sm font-semibold text-slate-700">
+                Usuario
+              </label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Ingresa tu usuario"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3"
+              />
+            </div>
+
+            <!-- TODO: alinear el label y el input lado a lado -->
+            <div class="space-y-2">
+              <label for="password" class="text-sm font-semibold text-slate-700">
+                Contrasena
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Ingresa tu contrasena"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3"
+              />
+            </div>
+
+            <!-- TODO: convertir este boton en un CTA con colores definidos -->
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white"
+            >
+              Ingresar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
